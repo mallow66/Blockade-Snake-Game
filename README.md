@@ -28,3 +28,35 @@ game.
 1. Using the indication of a player, with the keys of direction of the keyboard.
 2. Or independently, following a random movement or following an intelligent movement.
 These modes of movements are detailed at the following sections.
+
+### Movement controlled by the player
+As long as the player does not hit any keys, the snake goes straight. As soon as
+player taps a direction key, his snake takes that direction; the arrows
+can then either correspond to the cardinal points, or indicate a new
+direction relative to the current direction (left or right).
+
+### Random movement
+The snake randomly chooses its direction, even if the corresponding box is
+busy.
+
+### Smart movement
+The snake can know if the front, right or left boxes are occupied. he
+Randomly chooses to go in one of the free directions. If the snake can not
+choose free direction, he sits down.
+
+### Very smart movement
+The snake can memorize the different positions occupied by the snake
+each calculation cycle, and take this into account when calculating its next direction. If the
+snake can not choose a free direction, he is falling out.
+
+### Multiplayer (Network game)
+
+In addition, two players can play a network: in this case, each player
+will launch his own game on his computer, connect to the other player and control
+his own snake. He will see on his screen the two snakes: his and his
+opponent.
+Both player programs will communicate in client / server mode. Each
+program must be able to be started either in client mode or in server mode. When
+two players want to play a game, they have to decide which player will launch
+its program in server mode, and which player will launch his program in
+customer. The server must be started before the client.
